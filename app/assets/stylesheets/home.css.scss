@@ -1,0 +1,60 @@
+/*html { 
+	background: url(melimelobg.jpg) no-repeat center center fixed; 
+	background-size: cover;
+}*/
+
+.padding-0 {
+	padding: 0;
+}
+
+#panel-1 {
+	background: url(melimelobg.jpg) no-repeat center center fixed; 
+	height: 100vh;
+	width: 100vw;
+}
+
+body {
+	background-color: transparent !important;
+}
+
+#main-text {
+	font-family: 'Montez', cursive;
+	color: #fbf4ee;
+	position: relative;
+	top: 170px;
+	font-size: 50px;
+	left: 30px;
+}
+
+#sub-text {
+	font-family: 'Indie Flower', cursive;
+	color: #fbf4ee;
+	position: relative;
+	top: 190px;
+	font-size: 25px;
+	left: 30px;
+}
+
+nav {
+	position: relative;
+	top: 20px;
+}
+
+#logo {
+	font-family: 'Montez', cursive;
+	color: #fbf4ee;
+	font-size: 30px;
+}
+
+nav ul {
+	list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul.links a {
+	font-family: 'Indie Flower', cursive;
+	color: #fbf4ee;
+	font-size: 20px;
+	padding-right: 50px;
+}
