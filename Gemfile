@@ -20,6 +20,7 @@ gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 gem 'pg'
 gem 'rails_12factor', group: :production
+gem 'aws-s3'
 # bundle exec rake doc:rails generates the API under doc/api.
 
 # Use ActiveModel has_secure_password

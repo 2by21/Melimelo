@@ -30,6 +30,10 @@ GEM
     arel (5.0.1.20140414130214)
     autoprefixer-rails (4.0.2.1)
       execjs
+    aws-s3 (0.6.3)
+      builder
+      mime-types
+      xml-simple
     bootstrap-sass (3.3.1.0)
       sass (~> 3.2)
     builder (3.2.2)
@@ -106,12 +110,14 @@ GEM
     uglifier (2.6.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    xml-simple (1.1.4)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   autoprefixer-rails
+  aws-s3
   bootstrap-sass
   coffee-rails (~> 4.0.0)
   jbuilder (~> 2.0)
