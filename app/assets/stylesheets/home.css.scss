@@ -8,9 +8,10 @@
 }
 
 #panel-1 {
-	background: url(melimelobg.jpg) no-repeat center center fixed; 
+	background: url(melimelobg.jpg) no-repeat center; 
 	height: 100vh;
-	width: 100vw;
+	min-width: 100wh;
+	background-size: cover;
 }
 
 body {
@@ -23,7 +24,7 @@ body {
 	position: relative;
 	top: 170px;
 	font-size: 50px;
-	left: 30px;
+	left: 45px;
 }
 
 #sub-text {
@@ -31,14 +32,14 @@ body {
 	color: #fbf4ee;
 	position: relative;
 	top: 190px;
-	font-size: 25px;
-	left: 30px;
+	font-size: 22px;
+	left: 45px;
 }
 
-nav {
+/*nav {
 	position: relative;
 	top: 20px;
-}
+}*/
 
 #logo {
 	font-family: 'Montez', cursive;
@@ -47,6 +48,9 @@ nav {
 }
 
 nav ul {
+	position: relative;
+	left: 40px;
+	top: 20px;
 	list-style-type: none;
     padding: 0;
     margin: 0;
