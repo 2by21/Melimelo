@@ -20,6 +20,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'quiet_assets'
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
+gem 'pg'
 # bundle exec rake doc:rails generates the API under doc/api.
 
 # Use ActiveModel has_secure_password
