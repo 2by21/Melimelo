@@ -23,7 +23,7 @@
 <div class="row">
 	<div class="col-lg-12">
 
-		<%= form_tag post_message_path, method: 'post', class: 'form-control' do %>
+		<%= form_tag '/', method: 'post', class: 'form-control' do %>
 			<%= label_tag(:name, "Name:") %>
 		  	<%= text_field_tag(:name) %><br>
 		  	<%= label_tag(:email, "Email:") %>
