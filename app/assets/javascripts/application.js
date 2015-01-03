@@ -15,3 +15,8 @@
 //= require bootstrap-sprockets
 //= require_tree .
 
+
+//= require base
+//= require_tree ./utilities
+//= require_tree ./elements
+//= require_tree .
