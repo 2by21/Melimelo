@@ -66,4 +66,16 @@ nav ul.links a {
 
 .tabs {
 	text-align: center;
+	width: 33wh;
+	height: 10vh;
+	font-size: 30px;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+}
+
+/* Tab Content Styling */
+
+.services-content p {
+	padding: 0px 300px 0px 300px;
+	height: 90vh;
 }
