@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-sprockets
+//= require photoswipe
 //= require_tree .
 
 
@@ -20,3 +21,4 @@
 //= require_tree ./utilities
 //= require_tree ./elements
 //= require_tree .
+
