@@ -73,15 +73,19 @@ class App.Static extends App.Base
             prototypingCount = 0
             productionCount = 0
 
-            $('.bxslider.slider1').bxSlider({
+            options = {
+              infiniteLoop: true,
               captions: true,
               adaptiveHeight: true,
               responsive: true,
               touchEnabled: true,
               preventDefaultSwipeX: true,
               controls: true,
-              startSlide: 0
-            })
+              startSlide: 0,
+              auto: true
+            }
+
+            $('.bxslider.slider1').bxSlider(options)
 
             $('.tab-button').click ->
               console.log $(this).data()
@@ -90,28 +94,12 @@ class App.Static extends App.Base
               if data['number'] == 2
                 $(this).addClass('tab-button')
                 if prototypingCount == 0
-                  $('.bxslider.slider2').bxSlider({
-                    captions: true,
-                    adaptiveHeight: true,
-                    responsive: true,
-                    touchEnabled: true,
-                    preventDefaultSwipeX: true,
-                    controls: true,
-                    startSlide: 0
-                  })
+                  $('.bxslider.slider2').bxSlider(options)
                   prototypingCount += 1
               else if data['number'] == 3
                 $(this).addClass('tab-button')
                 if productionCount == 0
-                  $('.bxslider.slider3').bxSlider({
-                    captions: true,
-                    adaptiveHeight: true,
-                    responsive: true,
-                    touchEnabled: true,
-                    preventDefaultSwipeX: true,
-                    controls: true,
-                    startSlide: 0
-                  })
+                  $('.bxslider.slider3').bxSlider(options)
                   productionCount += 1
                 
 
