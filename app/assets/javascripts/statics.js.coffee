@@ -3,7 +3,10 @@ class App.Static extends App.Base
 
     home: =>
         $ ->
-            # Tabs Javascript
+
+            ##################
+            # Tabs Javascript#
+            ##################
 
             extend = (a, b) ->
               for key of b
@@ -58,5 +61,60 @@ class App.Static extends App.Base
               @items[@current].className = "content-current"
               return
             
-            window.CBPFWTabs = new CBPFWTabs(document);
+            window.CBPFWTabs = new CBPFWTabs(document)
+
+            
+            ######################
+            # Javascript Gallery #
+            ######################
+
+            $('.tabs nav ul li:first').addClass('tab-button')
+
+            prototypingCount = 0
+            productionCount = 0
+
+            $('.bxslider.slider1').bxSlider({
+              captions: true,
+              adaptiveHeight: true,
+              responsive: true,
+              touchEnabled: true,
+              preventDefaultSwipeX: true,
+              controls: true,
+              startSlide: 0
+            })
+
+            $('.tab-button').click ->
+              console.log $(this).data()
+              data = $(this).data()
+
+              if data['number'] == 2
+                $(this).addClass('tab-button')
+                if prototypingCount == 0
+                  $('.bxslider.slider2').bxSlider({
+                    captions: true,
+                    adaptiveHeight: true,
+                    responsive: true,
+                    touchEnabled: true,
+                    preventDefaultSwipeX: true,
+                    controls: true,
+                    startSlide: 0
+                  })
+                  prototypingCount += 1
+              else if data['number'] == 3
+                $(this).addClass('tab-button')
+                if productionCount == 0
+                  $('.bxslider.slider3').bxSlider({
+                    captions: true,
+                    adaptiveHeight: true,
+                    responsive: true,
+                    touchEnabled: true,
+                    preventDefaultSwipeX: true,
+                    controls: true,
+                    startSlide: 0
+                  })
+                  productionCount += 1
+                
+
+
+ 
             

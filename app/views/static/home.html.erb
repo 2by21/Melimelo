@@ -1,62 +1,15 @@
 <!-- First panel -->
 <div id="panel-1">
-
-	<nav>
-		<ul class="links">
-			<a id="logo" href="#">Meli Melo</a>
-			<a id="contact-button" href="#">Contact</a>
-			<a id="contact-button" href="#">Services</a>
-			<a id="contact-button" href="#">Products</a>
-		</ul>
-	</nav>
-
-	<div class="col-lg-12">
-		<div id="main-text">Lorem Ipsum Estude</div>
-		<div id="sub-text">
-			Nullam pretium quis lorem molestie<br>
-			Aenean enim est, vehicula ac dui id,<br>
-			consequat cursus purus.
-		</div>
-	</div>
+	<%= render 'nav' %>
+	<%= render 'call_to_action' %>
 </div>
 
 <div class="tabs tabs-style-iconbox">
-	<nav>
-		<ul>
-			<li><a href="#section-iconbox-1" class="icon icon-config"><span class="tab-text">Sourcing</span></a></li>
-			<li><a href="#section-iconbox-2" class="icon icon-tools"><span class="tab-text">Prototyping</span></a></li>
-			<li><a href="#section-iconbox-3" class="icon icon-gift"><span class="tab-text">Production</span></a></li>
-		</ul>
-	</nav>
-	<div class="content-wrap">
-		<section id="section-iconbox-1">
-			<h1 style="text-align:center;">Sourcing</h1>
-			Sed sodales sem turpis, vel consequat mi tristique sed. Integer ut porttitor justo. Nunc sed purus congue, consectetur erat ac, rutrum orci. Aenean et rhoncus mi. Nunc placerat feugiat erat. Curabitur ac vulputate velit. Cras nec arcu erat. In arcu metus, interdum sit amet sollicitudin at, cursus in elit. Maecenas fermentum, tellus ac pellentesque lacinia, est sem vulputate dolor, vel bibendum lorem urna euismod neque. Vivamus hendrerit est vel mattis faucibus. Donec sit amet nunc eu felis lobortis ultricies. Donec at suscipit leo. Suspendisse et justo urna. Nam a facilisis leo. Aenean facilisis rhoncus mi et gravida. Vivamus sit amet ante odio.
-		</section>
-		<section id="section-iconbox-2">
-			<h1 style="text-align:center;">Prototyping</h1>
-			Nunc pharetra elit sapien, et volutpat diam hendrerit non. Maecenas aliquet arcu ac magna euismod, vel auctor augue tempor. Vestibulum dapibus tristique nisl, at mollis metus volutpat vitae. Praesent ac nisi ullamcorper, condimentum felis eu, tincidunt velit. Proin eleifend velit vehicula enim tempus, a rhoncus nibh ultrices. Aenean in mauris in dui pharetra pretium sit amet ac dui. Vestibulum sollicitudin lectus vitae ipsum varius ornare.</p></section>
-		<section id="section-iconbox-3">
-			<h1 style="text-align:center;">Production</h1>
-			Nullam ut volutpat orci. Morbi tristique posuere nisl quis ultrices. Vivamus scelerisque risus vitae felis consequat placerat. Donec et pretium tortor. Praesent placerat iaculis euismod. Donec vitae rhoncus ex. Vivamus nec augue eget sem feugiat suscipit vitae a tellus.
-		</section>
-	</div><!-- /content -->
+	<%= render 'tab_buttons' %>
+	<%= render 'tab_content' %>
 </div>
 
 
 <!-- CONTACT FORM -->
 
-<div class="row">
-	<div class="col-lg-12">
-
-		<%= form_tag '/', method: 'post', class: 'form-control' do %>
-			<%= label_tag(:name, "Name:") %>
-		  	<%= text_field_tag(:name) %><br>
-		  	<%= label_tag(:email, "Email:") %>
-		  	<%= text_field_tag(:email) %><br>
-		  	<%= label_tag(:message, "Message:") %>
-		  	<%= text_area_tag(:message) %><br>
-		  	<%= submit_tag("Send Message") %>
-		<% end %>
-	</div>
-</div>
+<%= render 'contact_form' %>
