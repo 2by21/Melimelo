@@ -76,7 +76,7 @@ class App.Static extends App.Base
             options = {
               infiniteLoop: true,
               captions: true,
-              adaptiveHeight: true,
+              adaptiveHeight: false,
               responsive: true,
               touchEnabled: true,
               preventDefaultSwipeX: true,
@@ -85,20 +85,24 @@ class App.Static extends App.Base
               auto: true
             }
 
-            $('.bxslider.slider1').bxSlider(options)
+            $('.slider1').bxSlider(options)
 
             $('.tab-button').click ->
               console.log $(this).data()
               data = $(this).data()
 
               if data['number'] == 2
-                $(this).addClass('tab-button')
-                $('.bxslider.slider2').bxSlider(options)
+                $(this).addClass('tab-button') if !$(this).hasClass('tab-button')
+                if prototypingCount == 0
+                  console.log 'bxSlider called on slider2'
+                  $('.slider2').bxSlider(options)
+                  prototypingCount += 1
               else if data['number'] == 3
-                $(this).addClass('tab-button')
-                $('.bxslider.slider3').bxSlider(options)
+                $(this).addClass('tab-button') if !$(this).hasClass('tab-button')
+                if productionCount == 0
+                  $('.slider3').bxSlider(options)
+                  productionCount += 1
                 
-
 
  
             

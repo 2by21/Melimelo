@@ -26,10 +26,15 @@ body {
 }
 
 #panel-1 {
-	background: url(melimelobg.jpg) no-repeat left; 
+	position: relative;
+	background: url(melimelobg.jpg) no-repeat left;
 	height: 100vh;
 	width: 100wh;
 	background-size: cover;
+	overflow-y: auto;
+	transform: translateZ(-1px);
+	overflow-x: hidden;
+	perspective: 1px;
 }
 
 #logo {
@@ -118,6 +123,7 @@ nav ul.links a {
 
 .tabs {
 	position: relative;
+	background-attachment: fixed;
 	overflow: hidden;
 	margin: 0 auto;
 	width: 100%;
