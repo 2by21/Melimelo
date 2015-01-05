@@ -93,14 +93,10 @@ class App.Static extends App.Base
 
               if data['number'] == 2
                 $(this).addClass('tab-button')
-                if prototypingCount == 0
-                  $('.bxslider.slider2').bxSlider(options)
-                  prototypingCount += 1
+                $('.bxslider.slider2').bxSlider(options)
               else if data['number'] == 3
                 $(this).addClass('tab-button')
-                if productionCount == 0
-                  $('.bxslider.slider3').bxSlider(options)
-                  productionCount += 1
+                $('.bxslider.slider3').bxSlider(options)
                 
 
 
