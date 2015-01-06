@@ -82,7 +82,8 @@ class App.Static extends App.Base
               preventDefaultSwipeX: true,
               controls: true,
               startSlide: 0,
-              auto: true
+              auto: true,
+              preloadImages: 'visible'
             }
 
             $('.slider1').bxSlider(options)
