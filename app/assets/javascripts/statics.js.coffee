@@ -86,24 +86,19 @@ class App.Static extends App.Base
               preloadImages: 'visible'
             }
 
-            $('.slider1').bxSlider(options)
+            slider1 = $('.slider1')
+            slider2 = $('.slider2')
+            slider3 = $('.slider3')
+
+            slider1.bxSlider(options)
+            slider2.bxSlider(options)
+            slider3.bxSlider(options)
 
             $('.tab-button').click ->
-              console.log $(this).data()
-              data = $(this).data()
+              slider1.reloadSlider(options)
+              slider2.reloadSlider(options)
+              slider3.reloadSlider(options)
 
-              if data['number'] == 2
-                $(this).addClass('tab-button') if !$(this).hasClass('tab-button')
-                if prototypingCount == 0
-                  console.log 'bxSlider called on slider2'
-                  $('.slider2').bxSlider(options)
-                  prototypingCount += 1
-              else if data['number'] == 3
-                $(this).addClass('tab-button') if !$(this).hasClass('tab-button')
-                if productionCount == 0
-                  $('.slider3').bxSlider(options)
-                  productionCount += 1
-                
-
+            
  
             
